@@ -1,25 +1,56 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import '../src/index.css' 
+import FirstScreen from './components/firstScreen'
+import Navbar from './components/navbar'
+import {BrowserRouter, Route} from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Contacts from './components/Contacts'
 
 class App extends Component {
-  render() {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      visited: false
+    }
+  }
+
+  componentWillMount(){
+   var store = localStorage.getItem('local-visited');
+   console.log(store);
+  }
+
+  handleClick = () => {
+    console.log ('click');
+  }
+  render() { 
+    
+    this.handleClick = () => {
+      localStorage.setItem('visited', 1);
+      this.setState({
+        visited: true 
+      });
+    }
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+      { this.state.visited &&
+        <BrowserRouter>
+        <div className="App">
+        <Navbar />
+         <Route exact path='/' component={Home} />
+         <Route path='/About' component={About} />
+         <Route path='/Contacts' component={Contacts} />
+        </div>
+      </BrowserRouter>
+      }
+
+      {!this.state.visited &&
+        <div >
+        <FirstScreen handleClick={this.handleClick}/>
+        </div>
+        }
       </div>
     );
   }

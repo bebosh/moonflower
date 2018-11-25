@@ -8,7 +8,62 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  animation: flow-rotate 4s infinite;
+  height: 10vmin;
 }
+
+@keyframes flow-rotate {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.App_first_screen {
+  background-color: #313842;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App_first_screen img{
+  width: 60px;
+  height: 60px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-title, .home-text{
+  padding: 2em 0;
+  letter-spacing: 1px;
+}
+
+.active{
+  text-decoration: underline;
+}
+
+.App-logo{
+  cursor: pointer;
+}
+
+
