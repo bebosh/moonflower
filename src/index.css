@@ -8,8 +8,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*------------------ general purpose classes ---------------------*/
+
+.centered{
+  text-align: center;
+}
+
+.vertical_padding{
+  padding: 50px 0;
+}
+.fantasy{
+  font-family:fantasy;
+  letter-spacing: 2px;
+  color: #405168;
+}
+
+/*------------------- page specific classes --------------------------*/
+/* first screen */
+
 .App-logo {
-  /*animation: App-logo-spin infinite 20s linear;*/
   animation: flow-rotate 4s infinite;
   height: 10vmin;
 }
@@ -25,7 +42,7 @@ body {
 }
 
 .App_first_screen {
-  background-color: #313842;
+  background-color: #405168;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,17 +70,63 @@ body {
   }
 }
 
+/*------------------- home page --------------------------*/
+
 .home-title, .home-text{
   padding: 2em 0;
   letter-spacing: 1px;
 }
 
+.home-div{
+  background-image: url("./images/field.JPG");
+  
+}
+
+.nav-wrapper{
+  padding:10px 0; 
+  background-color: transparent;
+}
+
 .active{
-  text-decoration: underline;
+  color: #56749e !important;
+  font-weight:600;
+}
+
+.nav_title{
+  font-size: 16px;
+}
+
+nav ul a {
+  color:#999 !important;
+  font-weight:500;
 }
 
 .App-logo{
   cursor: pointer;
 }
+.App-logo-navbar {
+  height: 1.5em;
+  padding: 10px;
+  width: 1.5em;
+}
 
+.brand-logo{
+  background-color: #405168;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
 
+/*---------------------- footer --------------------*/
+
+footer h5{
+  font-size: 16px;
+}
+
+footer p{
+  font-size: 12px;
+}
+
+footer a{
+  font-size: 12px;
+}

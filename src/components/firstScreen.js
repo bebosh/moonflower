@@ -1,4 +1,4 @@
-import logo from '../flower.svg'
+import logo from '../images/flower.svg'
 import React, { Component } from 'react'
 
 export default class firstScreen extends Component {
