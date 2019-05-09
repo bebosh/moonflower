@@ -10,18 +10,89 @@ body {
 
 /*------------------ general purpose classes ---------------------*/
 
-.centered{
+.centered {
   text-align: center;
 }
 
-.vertical_padding{
+.vertical_padding {
   padding: 50px 0;
 }
-.fantasy{
-  font-family:fantasy;
+.fantasy {
+  font-family: fantasy;
   letter-spacing: 2px;
   color: #405168;
 }
+
+/*------------------- navbar ------------------------*/
+.nav-wrapper {
+  background-color: #fff;
+  height: 64px;
+}
+
+.active {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.nav_title {
+  font-size: 16px;
+}
+
+nav ul a {
+  color: #aaa !important;
+  font-weight: 500;
+  padding: 0 5vw !important;
+}
+
+.App-logo {
+  cursor: pointer;
+}
+.App-logo-navbar {
+  height: 1.5em;
+  padding: 10px;
+  width: 1.5em;
+}
+
+.brand-logo {
+  background-color: #405168;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.sidenav-trigger{
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+nav ul li {
+  float: none !important;
+}
+
+.visible {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+.hidden {
+  transform: translate3d(-30vw, 0, 0);
+}
+
+
+.sideBar {
+  
+  min-width: 20vw;
+  height: 100vh;
+  background-color:  #405168d5;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  overflow: scroll;
+  z-index: 1000;
+}
+
 
 /*------------------- page specific classes --------------------------*/
 /* first screen */
@@ -52,7 +123,7 @@ body {
   color: white;
 }
 
-.App_first_screen img{
+.App_first_screen img {
   width: 60px;
   height: 60px;
 }
@@ -72,61 +143,30 @@ body {
 
 /*------------------- home page --------------------------*/
 
-.home-title, .home-text{
+.home-title,
+.home-text {
   padding: 2em 0;
   letter-spacing: 1px;
 }
 
-.home-div{
+.home-div {
   background-image: url("./images/field.JPG");
-  
 }
 
-.nav-wrapper{
-  padding:10px 0; 
-  background-color: transparent;
-}
-
-.active{
-  color: #56749e !important;
-  font-weight:600;
-}
-
-.nav_title{
-  font-size: 16px;
-}
-
-nav ul a {
-  color:#999 !important;
-  font-weight:500;
-}
-
-.App-logo{
-  cursor: pointer;
-}
-.App-logo-navbar {
-  height: 1.5em;
-  padding: 10px;
-  width: 1.5em;
-}
-
-.brand-logo{
-  background-color: #405168;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-}
 
 /*---------------------- footer --------------------*/
 
-footer h5{
+footer h5 {
   font-size: 16px;
 }
 
-footer p{
+footer p {
   font-size: 12px;
 }
 
-footer a{
+footer a {
   font-size: 12px;
 }
+
+
+/*+++++++++++++++++++++++++++++++++ mobile ++++++++++++++++++++++++++++++++++++++++++++*/
