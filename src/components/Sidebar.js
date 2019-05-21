@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = props => {
-  
+  console.log(props);
   var visible = " sideBar hidden";
 
   if (props.show) {
@@ -10,7 +10,7 @@ const Sidebar = props => {
   }
 
   return (
-    <div >
+    <div onClick={props.handleClick} >
       <ul className={visible}>
         <li>
           <NavLink exact to="/" className="nav_title">

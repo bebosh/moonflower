@@ -16,17 +16,19 @@ body {
 
 .vertical_padding {
   padding: 50px 0;
+  margin: 0;
 }
 .fantasy {
-  font-family: fantasy;
+  font-family: Ubuntu;
   letter-spacing: 2px;
-  color: #405168;
+  color: #fff;
 }
 
 /*------------------- navbar ------------------------*/
 .nav-wrapper {
-  background-color: #fff;
+  background-color:transparent;
   height: 64px;
+  box-shadow: none;
 }
 
 .active {
@@ -41,7 +43,7 @@ body {
 nav ul a {
   color: #aaa !important;
   font-weight: 500;
-  padding: 0 5vw !important;
+  padding: 0 30px !important;
 }
 
 .App-logo {
@@ -54,16 +56,21 @@ nav ul a {
 }
 
 .brand-logo {
-  background-color: #405168;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  margin-top: 10px;
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+  font-family: ubuntu;
+  font-weight: 800;
 }
 
-.sidenav-trigger{
+.brand-logo span {
+  color: #eee;
+  font-weight: 100;
+}
+
+.sidenav-trigger {
   margin-top: 5px;
   cursor: pointer;
+  color: #eee;
 }
 
 nav ul li {
@@ -79,22 +86,19 @@ nav ul li {
   transform: translate3d(-30vw, 0, 0);
 }
 
-
 .sideBar {
-  
-  min-width: 20vw;
+  width: 9em;
   height: 100vh;
-  background-color:  #405168d5;
+  background-color: #405168d5;
   position: fixed;
-  top: 65px;
   left: 0;
   transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
   overflow: scroll;
   z-index: 1000;
 }
 
-
 /*------------------- page specific classes --------------------------*/
+
 /* first screen */
 
 .App-logo {
@@ -112,8 +116,28 @@ nav ul li {
   }
 }
 
+.title-first_screen {
+  text-transform: uppercase;
+  letter-spacing: 4px !important;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 6vw !important;
+}
+
+h5 {
+  font-size: 2vw !important;
+}
+
+p.title-first_screen {
+  font-size: 1vw !important;
+}
+
 .App_first_screen {
-  background-color: #405168;
+  background-image: url("./images/building.JPG");
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -124,8 +148,9 @@ nav ul li {
 }
 
 .App_first_screen img {
-  width: 60px;
-  height: 60px;
+  margin:30px;
+  width: 8vw;
+  height: 8vw;
 }
 
 .App-link {
@@ -143,16 +168,34 @@ nav ul li {
 
 /*------------------- home page --------------------------*/
 
-.home-title,
+.home-title {
+  padding: 2em 0;
+  letter-spacing: 1px;
+  font-size: 4vw;
+  font-family: ubuntu;
+}
+
 .home-text {
   padding: 2em 0;
   letter-spacing: 1px;
+  font-size: 2vw;
+  font-family: ubuntu;
 }
 
-.home-div {
-  background-image: url("./images/field.JPG");
+.title-container {
+  height: 100vh;
+  background-image: url('./images/building.JPG');
+  background-size: cover;
+  padding: 15%;
+  background-position: center;
+  background-size: cover;
+  margin-top: -64px;
 }
 
+.image-home {
+  width: 9vw;
+  height: 9vw;
+}
 
 /*---------------------- footer --------------------*/
 
@@ -168,5 +211,9 @@ footer a {
   font-size: 12px;
 }
 
+.inline-list {
+  display: inline-grid;
+  margin: 5px 40px;
+}
 
 /*+++++++++++++++++++++++++++++++++ mobile ++++++++++++++++++++++++++++++++++++++++++++*/
