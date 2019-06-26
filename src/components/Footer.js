@@ -8,9 +8,10 @@ export default function Footer() {
           <div className="col l6 s12 center">
             <h5 className="white-text">About me</h5>
             <p className="grey-text text-lighten-4">
-              We are a team of college students working on this project like
-              it's our full time job. Any amount would help support and continue
-              development on this project and is greatly appreciated.
+              I like to know what is going on around me, be it science,
+              technology, environment or finance, I'm always interested in
+              everything that moves the human being (towards
+              progress, preferably).
             </p>
           </div>
 
@@ -23,7 +24,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a className="white-text" href="https://www.linkedin.com/in/paolo-floreano-38629453/">
+                <a
+                  className="white-text"
+                  href="https://www.linkedin.com/in/paolo-floreano-38629453/"
+                >
                   <i className="fab fa-linkedin"> </i> Linkedin
                 </a>
               </li>
@@ -35,7 +39,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a className="white-text" href="https://www.facebook.com/paolo.floreano">
+                <a
+                  className="white-text"
+                  href="https://www.facebook.com/paolo.floreano"
+                >
                   <i className="fab fa-facebook-square" /> Facebook
                 </a>
               </li>

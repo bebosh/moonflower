@@ -19,12 +19,12 @@ const Sidebar = props => {
         </li>
         <li>
           <NavLink to="/About" className="nav_title">
-            About
+            About me
           </NavLink>
         </li>
         <li>
           <NavLink to="/Contacts" className="nav_title">
-            Contacts
+            Projects
           </NavLink>
         </li>
       </ul>

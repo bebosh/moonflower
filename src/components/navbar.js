@@ -8,10 +8,7 @@ class Navbar extends Component {
     return (
       <div className="navbar-fixed">
         <nav className="nav-wrapper">
-          <div className="container">
-            <a href="/" className="brand-logo">
-              Moonflower <span>studio</span>
-            </a>
+          <div>
             <span className="right grey-text text-darken-1">
               <i className="material-icons sidenav-trigger" data-target="side-menu-burger" onClick={this.props.handleClick}>
                 menu

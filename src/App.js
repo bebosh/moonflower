@@ -22,9 +22,11 @@ class App extends Component {
   }
 
   clickToHide = () => {
-    this.setState({
-      show: false
-    });
+    if (this.state.show === true) {
+      this.setState({
+        show: false
+      });
+    }
   };
 
   handleClick = () => {

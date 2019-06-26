@@ -10,34 +10,52 @@ body {
 
 /*------------------ general purpose classes ---------------------*/
 
+p{
+  font-size: 14px !important;
+}
+
 .centered {
   text-align: center;
 }
 
-.vertical_padding {
-  padding: 50px 0;
-  margin: 0;
-}
 .fantasy {
   font-family: Ubuntu;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #fff;
 }
 
+.fantasy-dark{
+  font-family: Ubuntu;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.tab:hover {
+  font-weight: 600;
+}
+
+.row {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+.spacer{
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+.row .col.offset-l2 {
+  margin-left: 8%;
+}
 /*------------------- navbar ------------------------*/
 .nav-wrapper {
-  background-color:transparent;
+  background-color: transparent;
   height: 64px;
   box-shadow: none;
 }
 
-.active {
-  color: #fff !important;
-  font-weight: 600;
-}
-
 .nav_title {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 nav ul a {
@@ -97,6 +115,14 @@ nav ul li {
   z-index: 1000;
 }
 
+nav i.material-icons {
+  display: block;
+  font-size: 40px;
+  height: 56px;
+  line-height: 60px;
+  color: #aaa;
+  margin:20px 50px;
+}
 /*------------------- page specific classes --------------------------*/
 
 /* first screen */
@@ -124,10 +150,12 @@ nav ul li {
 
 h1 {
   font-size: 6vw !important;
+  font-weight: 800 !important;
 }
 
-h5 {
+h6 {
   font-size: 2vw !important;
+  line-height: 1.7em !important;
 }
 
 p.title-first_screen {
@@ -148,7 +176,7 @@ p.title-first_screen {
 }
 
 .App_first_screen img {
-  margin:30px;
+  margin: 30px;
   width: 8vw;
   height: 8vw;
 }
@@ -168,33 +196,115 @@ p.title-first_screen {
 
 /*------------------- home page --------------------------*/
 
-.home-title {
-  padding: 2em 0;
-  letter-spacing: 1px;
-  font-size: 4vw;
-  font-family: ubuntu;
-}
-
-.home-text {
-  padding: 2em 0;
-  letter-spacing: 1px;
-  font-size: 2vw;
-  font-family: ubuntu;
+.title_span {
+  font-size: 6vw !important;
+  font-weight: 100 !important;
 }
 
 .title-container {
-  height: 100vh;
-  background-image: url('./images/building.JPG');
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./images/building.JPG");
   background-size: cover;
-  padding: 15%;
+  padding: 6% 15%;
   background-position: center;
   background-size: cover;
   margin-top: -64px;
+}
+.text-container {
+  padding: 5% 10%;
 }
 
 .image-home {
   width: 9vw;
   height: 9vw;
+}
+
+.page-logo {
+  margin-bottom: 8%;
+  height: 10vw;
+}
+
+.arrow-scroll {
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  height: 60px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+
+i.arrow-scroll {
+  animation-name: arrow-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-scroll {
+  0% {
+    padding-top: 3px;
+  }
+  100% {
+    padding-top: 33px;
+  }
+}
+
+div.ui.pointing.secondary.menu {
+  text-align: center;
+  margin: 2.5em 0 3em;
+}
+
+a.item {
+  color: teal;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 3% 10%;
+}
+
+a.active.item {
+  border-bottom: 2px solid teal;
+}
+
+div.ui.segment.active.tab:hover{
+  font-weight: 400;
+}
+
+.section-title{
+  margin-top: 1.5em  !important;
+  color:teal !important;
+}
+
+.card{
+  border: 1px solid #ddd !important; 
+}
+
+.card-title{
+  color:teal !important;
+}
+
+.card .card-content {
+  padding: 60px 24px  !important;
+  min-height: 250px !important;
+}
+
+.card .card-content p{
+  font-size: 13px !important;
+}
+
+.card .card-image .card-title{
+  bottom: -70px !important;
+}
+
+.download-button-container{
+  margin-top: 40px ;
+}
+
+.download-button{
+  background: teal;
+  padding: 12px 10px;
+  margin-top: 40px ;
+  border-radius: 20px;
+  color: #fff;
 }
 
 /*---------------------- footer --------------------*/
@@ -217,3 +327,36 @@ footer a {
 }
 
 /*+++++++++++++++++++++++++++++++++ mobile ++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media screen and (max-width: 1024px) {
+  .title-container {
+    height: auto;
+  }
+
+  .arrow-scroll {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+h6{
+  font-size: 1rem !important;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p{
+  font-size: 14px !important;
+}
+  nav i.material-icons {
+    margin:5px 10px;
+  }
+
+  .page-logo {
+    height: 14vw;
+  }
+  
+}
+
